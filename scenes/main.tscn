@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ceyjisqh08d52"]
+[gd_scene format=3 uid="uid://ceyjisqh08d52"]
 
 [ext_resource type="Script" uid="uid://bul17rr2wguuq" path="res://scripts/main.gd" id="1_4pmwy"]
 [ext_resource type="AudioStream" uid="uid://byohjid0v3auf" path="res://assets/music/Main_Menu_Theme.mp3" id="2_ls4df"]
@@ -29,7 +29,7 @@ default_font_size = 60
 [sub_resource type="Theme" id="Theme_imovi"]
 default_font_size = 60
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=505753312]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,18 +40,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4pmwy")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=87235954]
 stream = ExtResource("2_ls4df")
 autoplay = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1685092001]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1081.0
 texture = ExtResource("3_8reb0")
 
-[node name="Game Title" type="Label" parent="."]
-layout_mode = 2
+[node name="Game Title" type="Label" parent="." unique_id=1111507188]
+layout_mode = 0
 offset_left = 839.0
 offset_top = 134.0
 offset_right = 1383.0
@@ -62,8 +62,8 @@ label_settings = SubResource("LabelSettings_iaiqt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Game Description" type="Label" parent="."]
-layout_mode = 2
+[node name="Game Description" type="Label" parent="." unique_id=2033437681]
+layout_mode = 0
 offset_left = 839.0
 offset_top = 221.0
 offset_right = 1383.0
@@ -75,8 +75,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Play" type="Button" parent="."]
-layout_mode = 2
+[node name="Play" type="Button" parent="." unique_id=121625430]
+layout_mode = 0
 offset_left = 835.0
 offset_top = 399.0
 offset_right = 1379.0
@@ -84,8 +84,8 @@ offset_bottom = 555.0
 theme = SubResource("Theme_torh1")
 text = "Play"
 
-[node name="Options" type="Button" parent="."]
-layout_mode = 2
+[node name="Options" type="Button" parent="." unique_id=787545194]
+layout_mode = 0
 offset_left = 835.0
 offset_top = 577.0
 offset_right = 1379.0
@@ -93,8 +93,8 @@ offset_bottom = 668.0
 theme = SubResource("Theme_hmpd5")
 text = "Options"
 
-[node name="Quit" type="Button" parent="."]
-layout_mode = 2
+[node name="Quit" type="Button" parent="." unique_id=911638409]
+layout_mode = 0
 offset_left = 830.0
 offset_top = 688.0
 offset_right = 1374.0
