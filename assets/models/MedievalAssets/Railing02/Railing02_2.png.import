@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c386hq7hnknbm"
 path.s3tc="res://.godot/imported/Railing02_2.png-d593f91c2d65df2b6219b2c7ffdfd834.s3tc.ctex"
+path.etc2="res://.godot/imported/Railing02_2.png-d593f91c2d65df2b6219b2c7ffdfd834.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Railing02/Railing02_2.png"
-dest_files=["res://.godot/imported/Railing02_2.png-d593f91c2d65df2b6219b2c7ffdfd834.s3tc.ctex"]
+dest_files=["res://.godot/imported/Railing02_2.png-d593f91c2d65df2b6219b2c7ffdfd834.s3tc.ctex", "res://.godot/imported/Railing02_2.png-d593f91c2d65df2b6219b2c7ffdfd834.etc2.ctex"]
 
 [params]
 

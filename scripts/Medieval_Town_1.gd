@@ -15,7 +15,7 @@ func _on_death_area_body_entered(body):
 		body.is_alive = false
 		body.queue_free()
 		
-		$UserInterface/ScoreLabel.increase_score()
+		%ScoreLabel.increase_score()
 
 
 func _on_trash_area_body_entered(body):

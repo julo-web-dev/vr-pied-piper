@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/vr_player.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="2_startxr"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="3_playerbody"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_movedirect"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="5_moveturn"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="6_lefthand"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="7_righthand"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_music"]
+radius = 8.0
+
+[node name="VRPlayer" type="XROrigin3D"]
+script = ExtResource("1_script")
+
+[node name="StartXR" parent="." instance=ExtResource("2_startxr")]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="LeftController" type="XRController3D" parent="."]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="LeftController" instance=ExtResource("6_lefthand")]
+
+[node name="MovementDirect" parent="LeftController" instance=ExtResource("4_movedirect")]
+max_speed = 5.0
+strafe = true
+
+[node name="RightController" type="XRController3D" parent="."]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="RightController" instance=ExtResource("7_righthand")]
+
+[node name="MovementTurn" parent="RightController" instance=ExtResource("5_moveturn")]
+smooth_turn_speed = 3.0
+
+[node name="PlayerBody" parent="." instance=ExtResource("3_playerbody")]
+
+[node name="MusicArea" type="Area3D" parent="PlayerBody" groups=["player"]]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody/MusicArea"]
+shape = SubResource("SphereShape3D_music")
+
+[connection signal="body_entered" from="PlayerBody/MusicArea" to="." method="_on_music_area_body_entered"]
+[connection signal="body_exited" from="PlayerBody/MusicArea" to="." method="_on_music_area_body_exited"]

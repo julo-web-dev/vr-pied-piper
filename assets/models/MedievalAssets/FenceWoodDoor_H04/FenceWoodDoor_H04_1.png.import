@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccfrcjx0rami1"
 path.s3tc="res://.godot/imported/FenceWoodDoor_H04_1.png-7237d66accb686280db66ae5d0eb80d3.s3tc.ctex"
+path.etc2="res://.godot/imported/FenceWoodDoor_H04_1.png-7237d66accb686280db66ae5d0eb80d3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/FenceWoodDoor_H04/FenceWoodDoor_H04_1.png"
-dest_files=["res://.godot/imported/FenceWoodDoor_H04_1.png-7237d66accb686280db66ae5d0eb80d3.s3tc.ctex"]
+dest_files=["res://.godot/imported/FenceWoodDoor_H04_1.png-7237d66accb686280db66ae5d0eb80d3.s3tc.ctex", "res://.godot/imported/FenceWoodDoor_H04_1.png-7237d66accb686280db66ae5d0eb80d3.etc2.ctex"]
 
 [params]
 
