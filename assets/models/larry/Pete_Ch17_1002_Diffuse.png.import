@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbbnctbqnk5gk"
 path.s3tc="res://.godot/imported/Pete_Ch17_1002_Diffuse.png-595254dfa6500d553d21f20fedba21cf.s3tc.ctex"
+path.etc2="res://.godot/imported/Pete_Ch17_1002_Diffuse.png-595254dfa6500d553d21f20fedba21cf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/larry/Pete_Ch17_1002_Diffuse.png"
-dest_files=["res://.godot/imported/Pete_Ch17_1002_Diffuse.png-595254dfa6500d553d21f20fedba21cf.s3tc.ctex"]
+dest_files=["res://.godot/imported/Pete_Ch17_1002_Diffuse.png-595254dfa6500d553d21f20fedba21cf.s3tc.ctex", "res://.godot/imported/Pete_Ch17_1002_Diffuse.png-595254dfa6500d553d21f20fedba21cf.etc2.ctex"]
 
 [params]
 

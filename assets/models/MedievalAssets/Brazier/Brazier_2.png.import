@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1jw3knlj8fbn"
 path.s3tc="res://.godot/imported/Brazier_2.png-2a1320a4fdd64c1173123c7300661921.s3tc.ctex"
+path.etc2="res://.godot/imported/Brazier_2.png-2a1320a4fdd64c1173123c7300661921.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Brazier/Brazier_2.png"
-dest_files=["res://.godot/imported/Brazier_2.png-2a1320a4fdd64c1173123c7300661921.s3tc.ctex"]
+dest_files=["res://.godot/imported/Brazier_2.png-2a1320a4fdd64c1173123c7300661921.s3tc.ctex", "res://.godot/imported/Brazier_2.png-2a1320a4fdd64c1173123c7300661921.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c28oxoduuwmiw"
 path.s3tc="res://.godot/imported/Stylized Hut01_9.png-9ca386a6c1c76bd5f3d6e8349782ff0f.s3tc.ctex"
+path.etc2="res://.godot/imported/Stylized Hut01_9.png-9ca386a6c1c76bd5f3d6e8349782ff0f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_9.png"
-dest_files=["res://.godot/imported/Stylized Hut01_9.png-9ca386a6c1c76bd5f3d6e8349782ff0f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Stylized Hut01_9.png-9ca386a6c1c76bd5f3d6e8349782ff0f.s3tc.ctex", "res://.godot/imported/Stylized Hut01_9.png-9ca386a6c1c76bd5f3d6e8349782ff0f.etc2.ctex"]
 
 [params]
 

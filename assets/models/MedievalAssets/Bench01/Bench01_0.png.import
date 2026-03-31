@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm2txc0tys25o"
 path.s3tc="res://.godot/imported/Bench01_0.png-8ed95fbd184d34795be23adeb54dbbcc.s3tc.ctex"
+path.etc2="res://.godot/imported/Bench01_0.png-8ed95fbd184d34795be23adeb54dbbcc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Bench01/Bench01_0.png"
-dest_files=["res://.godot/imported/Bench01_0.png-8ed95fbd184d34795be23adeb54dbbcc.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bench01_0.png-8ed95fbd184d34795be23adeb54dbbcc.s3tc.ctex", "res://.godot/imported/Bench01_0.png-8ed95fbd184d34795be23adeb54dbbcc.etc2.ctex"]
 
 [params]
 

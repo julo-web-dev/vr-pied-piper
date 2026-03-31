@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://oa1vad5os5pc"]
+[gd_scene format=3 uid="uid://oa1vad5os5pc"]
 
 [ext_resource type="PackedScene" uid="uid://cxk3lnnywtkwa" path="res://assets/rat_animated/scene.gltf" id="1_xqh53"]
 
@@ -44,7 +44,6 @@ func _process(delta):
 func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, .25)
 	move_and_slide()
-
 "
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dvu42"]
@@ -53,17 +52,17 @@ height = 0.75
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dcjr7"]
 
-[node name="Rat" type="CharacterBody3D" groups=["rats"]]
+[node name="Rat" type="CharacterBody3D" unique_id=875604714 groups=["rats"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.412096)
 script = SubResource("GDScript_gyof7")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_xqh53")]
+[node name="Sketchfab_Scene" parent="." unique_id=1068948256 instance=ExtResource("1_xqh53")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="Sketchfab_model" parent="Sketchfab_Scene" index="0"]
+[node name="Sketchfab_model" parent="Sketchfab_Scene" index="0" unique_id=552960935]
 transform = Transform3D(0.235365, 0, 0, 0, -1.02881e-08, 0.235365, 0, -0.235365, -1.02881e-08, 0, 0, 0)
 
-[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/RAT_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
+[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/RAT_fbx/Object_2/RootNode/Armature/Object_6" parent_id_path=PackedInt32Array(1068948256, 634417492) index="0" unique_id=248605781]
 bones/1/rotation = Quaternion(0.5, -0.5, 0.5, 0.5)
 bones/2/rotation = Quaternion(0.709754, -0.113967, 0.690992, -0.076103)
 bones/2/scale = Vector3(0.999999, 1, 1)
@@ -85,20 +84,20 @@ bones/17/scale = Vector3(1, 1, 1)
 bones/19/rotation = Quaternion(0.0398359, 0.0956432, 0.91816, 0.382423)
 bones/19/scale = Vector3(1, 1, 1)
 
-[node name="AnimationPlayer" parent="Sketchfab_Scene" index="1"]
+[node name="AnimationPlayer" parent="Sketchfab_Scene" index="1" unique_id=540631078]
 reset_on_save = false
 speed_scale = 0.5
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1859906406]
 avoidance_enabled = true
 
-[node name="HitBox" type="CollisionShape3D" parent="."]
+[node name="HitBox" type="CollisionShape3D" parent="." unique_id=1790711802]
 transform = Transform3D(1.91068e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 0.12, 0.11)
 shape = SubResource("CapsuleShape3D_dvu42")
 
-[node name="Area3D" type="Area3D" parent="." groups=["ratsCollision"]]
+[node name="Area3D" type="Area3D" parent="." unique_id=1727043606 groups=["ratsCollision"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1995057981]
 shape = SubResource("SphereShape3D_dcjr7")
 
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

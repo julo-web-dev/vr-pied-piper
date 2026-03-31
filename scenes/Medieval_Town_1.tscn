@@ -1,4 +1,4 @@
-[gd_scene load_steps=174 format=4 uid="uid://dwpwjjq4e2shm"]
+[gd_scene format=4 uid="uid://dwpwjjq4e2shm"]
 
 [ext_resource type="Texture2D" uid="uid://c7e3aji8o3qc5" path="res://assets/textures/Bricks/Bricks089_1K-JPG_Color.jpg" id="1_72mke"]
 [ext_resource type="Script" uid="uid://1swqal7pj3ff" path="res://scripts/Medieval_Town_1.gd" id="1_84x6b"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ck4gkkux4ff7b" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_3.png" id="10_ckqd1"]
 [ext_resource type="Texture2D" uid="uid://c1aca72mr54l8" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_4.png" id="11_nyefq"]
 [ext_resource type="Texture2D" uid="uid://dv788bo6mstxf" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_5.png" id="12_tpr7i"]
-[ext_resource type="PackedScene" uid="uid://df12646vid0b1" path="res://scenes/player.tscn" id="12_ukhp4"]
+[ext_resource type="PackedScene" path="res://scenes/vr_player.tscn" id="12_ukhp4"]
 [ext_resource type="PackedScene" uid="uid://oa1vad5os5pc" path="res://scenes/Rat.tscn" id="13_70p18"]
 [ext_resource type="Texture2D" uid="uid://bk11c0t0q26k5" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_6.png" id="13_o3af0"]
 [ext_resource type="Texture2D" uid="uid://cekomk1fcaxyl" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_7.png" id="14_810pg"]
@@ -1378,1792 +1378,1781 @@ points = PackedVector3Array(0.127347, 1.44376, -0.662288, 0.0821785, 1.44415, 0.
 [sub_resource type="SphereShape3D" id="SphereShape3D_ukjay"]
 radius = 1.0
 
-[sub_resource type="Theme" id="Theme_0pcwe"]
-default_font_size = 22
-
-[sub_resource type="LabelSettings" id="LabelSettings_eheq8"]
-
-[node name="MedievalTown1" type="Node3D"]
+[node name="MedievalTown1" type="Node3D" unique_id=119837895]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202063, 0, -0.259794)
 script = ExtResource("1_84x6b")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2099270204]
 transform = Transform3D(-0.947875, 0.197568, 0.250001, 0.310155, 0.392176, 0.866027, 0.0730546, 0.898424, -0.43301, 1.70998, 9.01229, -2.96174)
 shadow_enabled = true
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=35125801]
 navigation_mesh = SubResource("NavigationMesh_4dhdv")
 
-[node name="Floor" type="StaticBody3D" parent="NavigationRegion3D"]
+[node name="Floor" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1051932673]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Floor" unique_id=1768744205]
 shape = SubResource("BoxShape3D_wfknt")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Floor"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Floor" unique_id=1945076685]
 mesh = SubResource("BoxMesh_uo61a")
 
-[node name="Level_Models" type="Node3D" parent="NavigationRegion3D"]
+[node name="Level_Models" type="Node3D" parent="NavigationRegion3D" unique_id=1756490283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2133, 0.5, -3.57194)
 
-[node name="Barrel032" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Barrel032" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=86645603]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 19.5)
 
-[node name="Barrel03" type="Node3D" parent="NavigationRegion3D/Level_Models/Barrel032"]
+[node name="Barrel03" type="Node3D" parent="NavigationRegion3D/Level_Models/Barrel032" unique_id=207840677]
 
-[node name="SM_PROP_barrel_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03"]
+[node name="SM_PROP_barrel_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03" unique_id=1015429412]
 mesh = SubResource("ArrayMesh_1el4r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03/SM_PROP_barrel_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03/SM_PROP_barrel_01" unique_id=865739244]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03/SM_PROP_barrel_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03/SM_PROP_barrel_01/StaticBody3D" unique_id=1660548217]
 shape = SubResource("ConvexPolygonShape3D_stykb")
 
-[node name="SM_PROP_barrel_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03"]
+[node name="SM_PROP_barrel_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Barrel032/Barrel03" unique_id=688634419]
 mesh = SubResource("ArrayMesh_vjusy")
 skeleton = NodePath("")
 
-[node name="Stylized_Hut01" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Stylized_Hut01" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=804415863]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, 7.5)
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=1842657986]
 mesh = SubResource("ArrayMesh_qebf5")
 skeleton = NodePath("")
 
-[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=1884698581]
 mesh = SubResource("ArrayMesh_jgueh")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01/Cube_1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01/Cube_1" unique_id=162022863]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01/Cube_1/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01/Cube_1/StaticBody3D" unique_id=53003316]
 shape = SubResource("ConvexPolygonShape3D_ax4x1")
 
-[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=1424978306]
 mesh = SubResource("ArrayMesh_xu44n")
 skeleton = NodePath("")
 
-[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=174555180]
 mesh = SubResource("ArrayMesh_kam0s")
 skeleton = NodePath("")
 
-[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=2042314229]
 mesh = SubResource("ArrayMesh_txn7m")
 skeleton = NodePath("")
 
-[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=405772890]
 mesh = SubResource("ArrayMesh_85bwn")
 skeleton = NodePath("")
 
-[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=2070456255]
 mesh = SubResource("ArrayMesh_g8bvg")
 skeleton = NodePath("")
 
-[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=1216444255]
 mesh = SubResource("ArrayMesh_hq38h")
 skeleton = NodePath("")
 
-[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01"]
+[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut01" unique_id=2108737429]
 mesh = SubResource("ArrayMesh_kvt54")
 skeleton = NodePath("")
 
-[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=733748523]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7, 0, 11)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012" unique_id=1488993983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0212193, 0, -0.0424385)
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone01" unique_id=1613019723]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone01/StaticBody3D" unique_id=1925552967]
 shape = SubResource("ConvexPolygonShape3D_6wlak")
 
-[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012"]
+[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012" unique_id=348591448]
 transform = Transform3D(0.706205, 0, -0.708007, 0, 1, 0, 0.708007, 0, 0.706205, 7, 0, 3)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone012"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone012" unique_id=443194251]
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone012/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone012/Wall_Stone01" unique_id=494209]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone012/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone012/Wall_Stone01/StaticBody3D" unique_id=2046194859]
 shape = SubResource("ConvexPolygonShape3D_pyl78")
 
-[node name="Wall_Stone013" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012"]
+[node name="Wall_Stone013" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012" unique_id=428541799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013" unique_id=842442673]
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone01" unique_id=713258303]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone01/StaticBody3D" unique_id=2018788485]
 shape = SubResource("ConvexPolygonShape3D_gbb5k")
 
-[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013"]
+[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013" unique_id=1982478248]
 transform = Transform3D(0.706205, 0, -0.708007, 0, 1, 0, 0.708007, 0, 0.706205, -5.59057, -0.346984, 13.8397)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone012"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone012" unique_id=1310739950]
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone012/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone012/Wall_Stone01" unique_id=1294220858]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone012/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone013/Wall_Stone012/Wall_Stone01/StaticBody3D" unique_id=492995313]
 shape = SubResource("ConvexPolygonShape3D_1pod7")
 
-[node name="Wall_Stone02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012"]
+[node name="Wall_Stone02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012" unique_id=821747384]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone02" unique_id=1416781391]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone012/Wall_Stone02/StaticBody3D" unique_id=839976530]
 shape = SubResource("ConvexPolygonShape3D_dgexg")
 
-[node name="Bench" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Bench" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=813379358]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3937, 0, 12.292)
 
-[node name="Bench012" type="Node3D" parent="NavigationRegion3D/Level_Models/Bench"]
+[node name="Bench012" type="Node3D" parent="NavigationRegion3D/Level_Models/Bench" unique_id=1150540149]
 
-[node name="Bench01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Bench/Bench012"]
+[node name="Bench01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Bench/Bench012" unique_id=1133000474]
 mesh = SubResource("ArrayMesh_t6hbd")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Bench/Bench012/Bench01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Bench/Bench012/Bench01" unique_id=1637554389]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Bench/Bench012/Bench01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Bench/Bench012/Bench01/StaticBody3D" unique_id=1250172127]
 shape = SubResource("ConvexPolygonShape3D_e406a")
 
-[node name="Brazier" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Brazier" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1970616293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.53072, 0, 21.5542)
 
-[node name="Brazier2" type="Node3D" parent="NavigationRegion3D/Level_Models/Brazier"]
+[node name="Brazier2" type="Node3D" parent="NavigationRegion3D/Level_Models/Brazier" unique_id=1978098388]
 
-[node name="Brazier" type="Node3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2"]
+[node name="Brazier" type="Node3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2" unique_id=217225538]
 
-[node name="SM_PROP_brazier_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier"]
+[node name="SM_PROP_brazier_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier" unique_id=283045280]
 mesh = SubResource("ArrayMesh_sfbpa")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier/SM_PROP_brazier_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier/SM_PROP_brazier_01" unique_id=2097770834]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier/SM_PROP_brazier_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier/SM_PROP_brazier_01/StaticBody3D" unique_id=1625510442]
 shape = SubResource("ConvexPolygonShape3D_ys1h1")
 
-[node name="SM_PROP_brazier_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier"]
+[node name="SM_PROP_brazier_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier" unique_id=2110315402]
 mesh = SubResource("ArrayMesh_oerhn")
 skeleton = NodePath("")
 
-[node name="SM_PROP_brazier_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier"]
+[node name="SM_PROP_brazier_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Brazier/Brazier2/Brazier" unique_id=1587356882]
 mesh = SubResource("ArrayMesh_trchl")
 skeleton = NodePath("")
 
-[node name="Tombstone" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Tombstone" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=13244796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 17)
 
-[node name="Graveyard032" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard032" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=956909084]
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard032"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard032" unique_id=493282852]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard032/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard032/Graveyard03" unique_id=668969912]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard032/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard032/Graveyard03/StaticBody3D" unique_id=848791930]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard033" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard033" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=251402663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard033"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard033" unique_id=189008255]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard033/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard033/Graveyard03" unique_id=754697866]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard033/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard033/Graveyard03/StaticBody3D" unique_id=69062434]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard034" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard034" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=1256547790]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard034"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard034" unique_id=1406257704]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard034/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard034/Graveyard03" unique_id=1653850185]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard034/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard034/Graveyard03/StaticBody3D" unique_id=1333702417]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard035" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard035" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=637366449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard035"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard035" unique_id=1218209619]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard035/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard035/Graveyard03" unique_id=918674155]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard035/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard035/Graveyard03/StaticBody3D" unique_id=2059805037]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard036" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard036" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=508022161]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard036"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard036" unique_id=1758236274]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard036/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard036/Graveyard03" unique_id=627226601]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard036/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard036/Graveyard03/StaticBody3D" unique_id=1121774513]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard037" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard037" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=582722756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard037"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard037" unique_id=1361250198]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard037/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard037/Graveyard03" unique_id=473811577]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard037/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard037/Graveyard03/StaticBody3D" unique_id=807662795]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard038" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard038" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=1341486735]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard038"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard038" unique_id=1133814081]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard038/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard038/Graveyard03" unique_id=618194320]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard038/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard038/Graveyard03/StaticBody3D" unique_id=252276118]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard039" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard039" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=632148236]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard039"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard039" unique_id=1321957565]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard039/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard039/Graveyard03" unique_id=289273113]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard039/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard039/Graveyard03/StaticBody3D" unique_id=526383020]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard040" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard040" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=2034233003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard040"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard040" unique_id=1486134241]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard040/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard040/Graveyard03" unique_id=1450283614]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard040/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard040/Graveyard03/StaticBody3D" unique_id=2110905860]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard041" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard041" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=658821178]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard041"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard041" unique_id=1015512462]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard041/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard041/Graveyard03" unique_id=232975498]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard041/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard041/Graveyard03/StaticBody3D" unique_id=1390512852]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard042" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard042" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=620754998]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard042"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard042" unique_id=1741265275]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard042/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard042/Graveyard03" unique_id=131908957]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard042/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard042/Graveyard03/StaticBody3D" unique_id=716526505]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard043" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone"]
+[node name="Graveyard043" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone" unique_id=2130313104]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard043"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard043" unique_id=1675263334]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard043/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard043/Graveyard03" unique_id=2018303741]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard043/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone/Graveyard043/Graveyard03/StaticBody3D" unique_id=327077942]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Rock" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=583002599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 8)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock" unique_id=53911677]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock/Rock022" unique_id=404560894]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock/Rock022/Rock02" unique_id=389065135]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock/Rock022/Rock02/StaticBody3D" unique_id=1699935394]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Streetlamp" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Streetlamp" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=346176683]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -6.97113)
 
-[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp"]
+[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp" unique_id=1477178662]
 
-[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012"]
+[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012" unique_id=1203048354]
 
-[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=1116473664]
 mesh = SubResource("ArrayMesh_2hv3o")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01" unique_id=491549507]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D" unique_id=2004286852]
 shape = SubResource("ConvexPolygonShape3D_1ijir")
 
-[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=1966596449]
 mesh = SubResource("ArrayMesh_w02sq")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=1162225255]
 mesh = SubResource("ArrayMesh_lu2kc")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=534269170]
 mesh = SubResource("ArrayMesh_gnly2")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=901237889]
 mesh = SubResource("ArrayMesh_wukki")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=1046811965]
 mesh = SubResource("ArrayMesh_vdl3p")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp/Streetlamp012/Streetlamp01" unique_id=1799800890]
 mesh = SubResource("ArrayMesh_tfo53")
 skeleton = NodePath("")
 
-[node name="Stylized_Hut02" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Stylized_Hut02" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1799927618]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18, 0, 17.5)
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=1072251895]
 mesh = SubResource("ArrayMesh_qebf5")
 skeleton = NodePath("")
 
-[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=1278610928]
 mesh = SubResource("ArrayMesh_jgueh")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02/Cube_1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02/Cube_1" unique_id=2050200894]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02/Cube_1/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02/Cube_1/StaticBody3D" unique_id=1302515386]
 shape = SubResource("ConvexPolygonShape3D_ax4x1")
 
-[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=1357320051]
 mesh = SubResource("ArrayMesh_xu44n")
 skeleton = NodePath("")
 
-[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=1462811245]
 mesh = SubResource("ArrayMesh_kam0s")
 skeleton = NodePath("")
 
-[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=2038618493]
 mesh = SubResource("ArrayMesh_txn7m")
 skeleton = NodePath("")
 
-[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=1245001756]
 mesh = SubResource("ArrayMesh_85bwn")
 skeleton = NodePath("")
 
-[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=563687676]
 mesh = SubResource("ArrayMesh_g8bvg")
 skeleton = NodePath("")
 
-[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=637284532]
 mesh = SubResource("ArrayMesh_hq38h")
 skeleton = NodePath("")
 
-[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02"]
+[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut02" unique_id=400129537]
 mesh = SubResource("ArrayMesh_kvt54")
 skeleton = NodePath("")
 
-[node name="Stylized_Hut03" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Stylized_Hut03" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=605036829]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 1)
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=675654691]
 mesh = SubResource("ArrayMesh_qebf5")
 skeleton = NodePath("")
 
-[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=690241929]
 mesh = SubResource("ArrayMesh_jgueh")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03/Cube_1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03/Cube_1" unique_id=2079130606]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03/Cube_1/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03/Cube_1/StaticBody3D" unique_id=39059293]
 shape = SubResource("ConvexPolygonShape3D_ax4x1")
 
-[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=1018444905]
 mesh = SubResource("ArrayMesh_xu44n")
 skeleton = NodePath("")
 
-[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=1804555353]
 mesh = SubResource("ArrayMesh_kam0s")
 skeleton = NodePath("")
 
-[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=843577106]
 mesh = SubResource("ArrayMesh_txn7m")
 skeleton = NodePath("")
 
-[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=975061260]
 mesh = SubResource("ArrayMesh_85bwn")
 skeleton = NodePath("")
 
-[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=1360605608]
 mesh = SubResource("ArrayMesh_g8bvg")
 skeleton = NodePath("")
 
-[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=1723364276]
 mesh = SubResource("ArrayMesh_hq38h")
 skeleton = NodePath("")
 
-[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03"]
+[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut03" unique_id=1116855618]
 mesh = SubResource("ArrayMesh_kvt54")
 skeleton = NodePath("")
 
-[node name="Stylized_Hut04" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Stylized_Hut04" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1320074835]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -11.5)
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=340258153]
 mesh = SubResource("ArrayMesh_qebf5")
 skeleton = NodePath("")
 
-[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=1050906949]
 mesh = SubResource("ArrayMesh_jgueh")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04/Cube_1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04/Cube_1" unique_id=1884299572]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04/Cube_1/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04/Cube_1/StaticBody3D" unique_id=1750455750]
 shape = SubResource("ConvexPolygonShape3D_ax4x1")
 
-[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=989527397]
 mesh = SubResource("ArrayMesh_xu44n")
 skeleton = NodePath("")
 
-[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=591966588]
 mesh = SubResource("ArrayMesh_kam0s")
 skeleton = NodePath("")
 
-[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=1489772401]
 mesh = SubResource("ArrayMesh_txn7m")
 skeleton = NodePath("")
 
-[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=1167289216]
 mesh = SubResource("ArrayMesh_85bwn")
 skeleton = NodePath("")
 
-[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=1089192742]
 mesh = SubResource("ArrayMesh_g8bvg")
 skeleton = NodePath("")
 
-[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_7" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=120723211]
 mesh = SubResource("ArrayMesh_hq38h")
 skeleton = NodePath("")
 
-[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04"]
+[node name="Cube_8" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Stylized_Hut04" unique_id=1483502689]
 mesh = SubResource("ArrayMesh_kvt54")
 skeleton = NodePath("")
 
-[node name="Tombstone2" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Tombstone2" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1187627198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -12.5)
 
-[node name="Graveyard032" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard032" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=437739880]
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard032"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard032" unique_id=213370730]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard032/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard032/Graveyard03" unique_id=1622577565]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard032/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard032/Graveyard03/StaticBody3D" unique_id=2116771457]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard033" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard033" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=60748366]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard033"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard033" unique_id=414673991]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard033/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard033/Graveyard03" unique_id=1024767214]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard033/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard033/Graveyard03/StaticBody3D" unique_id=1763769132]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard034" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard034" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=1489920012]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard034"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard034" unique_id=1709156057]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard034/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard034/Graveyard03" unique_id=1411147725]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard034/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard034/Graveyard03/StaticBody3D" unique_id=659148396]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard035" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard035" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=267895116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard035"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard035" unique_id=667637390]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard035/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard035/Graveyard03" unique_id=861714546]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard035/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard035/Graveyard03/StaticBody3D" unique_id=1700911015]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard036" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard036" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=418257347]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard036"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard036" unique_id=307071726]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard036/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard036/Graveyard03" unique_id=142748323]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard036/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard036/Graveyard03/StaticBody3D" unique_id=2072256637]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard037" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard037" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=1402327177]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard037"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard037" unique_id=2005763955]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard037/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard037/Graveyard03" unique_id=1326366652]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard037/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard037/Graveyard03/StaticBody3D" unique_id=1022758428]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard038" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard038" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=2042668262]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard038"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard038" unique_id=1661631064]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard038/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard038/Graveyard03" unique_id=150616049]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard038/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard038/Graveyard03/StaticBody3D" unique_id=1102045012]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard039" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard039" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=1135898644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard039"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard039" unique_id=944635003]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard039/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard039/Graveyard03" unique_id=1350727229]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard039/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard039/Graveyard03/StaticBody3D" unique_id=1283262356]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard040" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2"]
+[node name="Graveyard040" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone2" unique_id=1259524720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard040"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard040" unique_id=1964807109]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard040/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard040/Graveyard03" unique_id=699130587]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard040/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone2/Graveyard040/Graveyard03/StaticBody3D" unique_id=1879576676]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Streetlamp2" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Streetlamp2" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1660469174]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 16)
 
-[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp2"]
+[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp2" unique_id=401150778]
 
-[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012"]
+[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012" unique_id=1069731172]
 
-[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=981885318]
 mesh = SubResource("ArrayMesh_2hv3o")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01" unique_id=661905487]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D" unique_id=95736083]
 shape = SubResource("ConvexPolygonShape3D_1ijir")
 
-[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=824125602]
 mesh = SubResource("ArrayMesh_w02sq")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=1845849306]
 mesh = SubResource("ArrayMesh_lu2kc")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=1624019515]
 mesh = SubResource("ArrayMesh_gnly2")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=1047170558]
 mesh = SubResource("ArrayMesh_wukki")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=1963277898]
 mesh = SubResource("ArrayMesh_vdl3p")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp2/Streetlamp012/Streetlamp01" unique_id=13482158]
 mesh = SubResource("ArrayMesh_tfo53")
 skeleton = NodePath("")
 
-[node name="Streetlamp3" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Streetlamp3" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1611120]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -12)
 
-[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp3"]
+[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp3" unique_id=678529512]
 
-[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012"]
+[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012" unique_id=1505180586]
 
-[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=1635992121]
 mesh = SubResource("ArrayMesh_2hv3o")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01" unique_id=1721708181]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D" unique_id=1669435457]
 shape = SubResource("ConvexPolygonShape3D_1ijir")
 
-[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=1873237956]
 mesh = SubResource("ArrayMesh_w02sq")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=231613535]
 mesh = SubResource("ArrayMesh_lu2kc")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=64870893]
 mesh = SubResource("ArrayMesh_gnly2")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=1886939332]
 mesh = SubResource("ArrayMesh_wukki")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=1764440455]
 mesh = SubResource("ArrayMesh_vdl3p")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp3/Streetlamp012/Streetlamp01" unique_id=1418609948]
 mesh = SubResource("ArrayMesh_tfo53")
 skeleton = NodePath("")
 
-[node name="Streetlamp4" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Streetlamp4" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1654800621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -0.5, 0)
 
-[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp4"]
+[node name="Streetlamp012" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp4" unique_id=989787154]
 
-[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012"]
+[node name="Streetlamp01" type="Node3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012" unique_id=117092083]
 
-[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=761114954]
 mesh = SubResource("ArrayMesh_2hv3o")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01" unique_id=1869790094]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01/SM_PROP_streetlamp_v01_01/StaticBody3D" unique_id=950998080]
 shape = SubResource("ConvexPolygonShape3D_1ijir")
 
-[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=683632733]
 mesh = SubResource("ArrayMesh_w02sq")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=1959992473]
 mesh = SubResource("ArrayMesh_lu2kc")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_3" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=2029493205]
 mesh = SubResource("ArrayMesh_gnly2")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_4" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=23942469]
 mesh = SubResource("ArrayMesh_wukki")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_5" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=1792612651]
 mesh = SubResource("ArrayMesh_vdl3p")
 skeleton = NodePath("")
 
-[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01"]
+[node name="SM_PROP_streetlamp_v01_01_6" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Streetlamp4/Streetlamp012/Streetlamp01" unique_id=1118402157]
 mesh = SubResource("ArrayMesh_tfo53")
 skeleton = NodePath("")
 
-[node name="Rock2" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock2" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=832340714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.824218, 0, 19.7589)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock2"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock2" unique_id=1868720842]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44643, 0, 0.185266)
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock2/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock2/Rock022" unique_id=1523059525]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock2/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock2/Rock022/Rock02" unique_id=1471104207]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock2/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock2/Rock022/Rock02/StaticBody3D" unique_id=1551414555]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock3" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock3" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1679898038]
 transform = Transform3D(0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, 0.34202, -7.45706, 0, 23.139)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock3"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock3" unique_id=846609775]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock3/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock3/Rock022" unique_id=748081775]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock3/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock3/Rock022/Rock02" unique_id=1824976176]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock3/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock3/Rock022/Rock02/StaticBody3D" unique_id=77568070]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock4" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock4" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=2051984558]
 transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -4.77903, 0, 23.3326)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock4"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock4" unique_id=1073511342]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock4/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock4/Rock022" unique_id=365578199]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock4/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock4/Rock022/Rock02" unique_id=614153175]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock4/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock4/Rock022/Rock02/StaticBody3D" unique_id=516660395]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock5" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock5" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=103630257]
 transform = Transform3D(0.325568, 0, 0.945519, 0, 1, 0, -0.945519, 0, 0.325568, -15, 0, 6.04632)
 
-[node name="Rock6" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock5"]
+[node name="Rock6" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock5" unique_id=1086264970]
 transform = Transform3D(0.052336, 0, -0.99863, 0, 1, 0, 0.99863, 0, 0.052336, -2.48363, 0, 1.28063)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6" unique_id=1549020833]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6/Rock022" unique_id=1086179451]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6/Rock022/Rock02" unique_id=261552261]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock5/Rock6/Rock022/Rock02/StaticBody3D" unique_id=1012414924]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock6" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock6" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1602860652]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, 3.82422, 0, -10.2411)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock6"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock6" unique_id=265928231]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44643, 0, 0.185266)
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock6/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock6/Rock022" unique_id=819925762]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock6/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock6/Rock022/Rock02" unique_id=29245984]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock6/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock6/Rock022/Rock02/StaticBody3D" unique_id=448248523]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock8" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock8" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=2102329173]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, -17.8025, 0, -16.2837)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock8"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock8" unique_id=776005172]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock8/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock8/Rock022" unique_id=1928252060]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock8/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock8/Rock022/Rock02" unique_id=1501693382]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock8/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock8/Rock022/Rock02/StaticBody3D" unique_id=817392175]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock9" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock9" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=154793596]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, -33.1191, 0, -12.2277)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock9"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock9" unique_id=403458725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44643, 0, 0.185266)
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock9/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock9/Rock022" unique_id=933999122]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock9/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock9/Rock022/Rock02" unique_id=1140520547]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock9/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock9/Rock022/Rock02/StaticBody3D" unique_id=479516103]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock10" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock10" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1508976749]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, -30.7264, 0, -10.969)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock10"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock10" unique_id=1337373792]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock10/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock10/Rock022" unique_id=1978782457]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock10/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock10/Rock022/Rock02" unique_id=315393206]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock10/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock10/Rock022/Rock02/StaticBody3D" unique_id=818061334]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock11" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock11" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1308581847]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, -27.1494, 0, 24.4133)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock11"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock11" unique_id=524077900]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock11/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock11/Rock022" unique_id=1296975472]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock11/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock11/Rock022/Rock02" unique_id=499719000]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock11/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock11/Rock022/Rock02/StaticBody3D" unique_id=1620427648]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock12" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock12" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=63908482]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, -1.80254, 0, -16.2837)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock12"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock12" unique_id=2080712451]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock12/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock12/Rock022" unique_id=35924539]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock12/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock12/Rock022/Rock02" unique_id=190562716]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock12/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock12/Rock022/Rock02/StaticBody3D" unique_id=1374818876]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock13" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock13" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1650851696]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, 3.88085, 0, -16.2277)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock13"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock13" unique_id=684571579]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44643, 0, 0.185266)
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock13/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock13/Rock022" unique_id=1007262274]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock13/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock13/Rock022/Rock02" unique_id=1865684273]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock13/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock13/Rock022/Rock02/StaticBody3D" unique_id=929115701]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock14" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock14" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1786009469]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, 6.93717, 0, -9.28066)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock14"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock14" unique_id=957589636]
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock14/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock14/Rock022" unique_id=718452926]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock14/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock14/Rock022/Rock02" unique_id=1430905197]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock14/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock14/Rock022/Rock02/StaticBody3D" unique_id=148773059]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Rock15" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock15" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1186132357]
 transform = Transform3D(0.325568, 0, 0.945519, 0, 1, 0, -0.945519, 0, 0.325568, -18, 0, 11.0463)
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock15"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock15" unique_id=163650451]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock15/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock15/Rock02" unique_id=1872944175]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock15/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock15/Rock02/StaticBody3D" unique_id=1706980663]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Tombstone3" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Tombstone3" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=288490547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -12.5)
 
-[node name="Graveyard032" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard032" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=273672247]
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard032"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard032" unique_id=1471134498]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard032/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard032/Graveyard03" unique_id=574337633]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard032/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard032/Graveyard03/StaticBody3D" unique_id=2147219419]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard033" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard033" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=1621878893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard033"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard033" unique_id=1786776360]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard033/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard033/Graveyard03" unique_id=225662955]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard033/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard033/Graveyard03/StaticBody3D" unique_id=910213100]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard034" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard034" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=2064014009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard034"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard034" unique_id=997019408]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard034/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard034/Graveyard03" unique_id=1737364953]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard034/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard034/Graveyard03/StaticBody3D" unique_id=1665947415]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard035" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard035" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=1420122557]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard035"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard035" unique_id=1520534298]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard035/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard035/Graveyard03" unique_id=1377889786]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard035/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard035/Graveyard03/StaticBody3D" unique_id=325832708]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard036" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard036" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=267248018]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard036"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard036" unique_id=248648597]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard036/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard036/Graveyard03" unique_id=1420123113]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard036/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard036/Graveyard03/StaticBody3D" unique_id=1966114095]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard037" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard037" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=1039569938]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard037"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard037" unique_id=1494222590]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard037/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard037/Graveyard03" unique_id=1711840294]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard037/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard037/Graveyard03/StaticBody3D" unique_id=910476927]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard038" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard038" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=1438218951]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard038"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard038" unique_id=1538901837]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard038/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard038/Graveyard03" unique_id=863606305]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard038/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard038/Graveyard03/StaticBody3D" unique_id=222374836]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard039" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard039" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=1606410579]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard039"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard039" unique_id=42965817]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard039/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard039/Graveyard03" unique_id=995731255]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard039/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard039/Graveyard03/StaticBody3D" unique_id=430940410]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Graveyard040" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3"]
+[node name="Graveyard040" type="Node3D" parent="NavigationRegion3D/Level_Models/Tombstone3" unique_id=1941197703]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 
-[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard040"]
+[node name="Graveyard03" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard040" unique_id=842715893]
 mesh = SubResource("ArrayMesh_2l0l2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard040/Graveyard03"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard040/Graveyard03" unique_id=660856662]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard040/Graveyard03/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Tombstone3/Graveyard040/Graveyard03/StaticBody3D" unique_id=1259966492]
 shape = SubResource("ConvexPolygonShape3D_o8jk4")
 
-[node name="Wall_Stone013" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Wall_Stone013" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=147796205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -18.5)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013" unique_id=1933661567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0212193, 0, -0.0424385)
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone01" unique_id=1426931594]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone01/StaticBody3D" unique_id=945370744]
 shape = SubResource("ConvexPolygonShape3D_6wlak")
 
-[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013"]
+[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013" unique_id=2103732491]
 transform = Transform3D(0.706205, 0, -0.708007, 0, 1, 0, 0.708007, 0, 0.706205, 7, 0, 3)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone012"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone012" unique_id=1317466504]
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone012/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone012/Wall_Stone01" unique_id=1493810216]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone012/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone012/Wall_Stone01/StaticBody3D" unique_id=1379026609]
 shape = SubResource("ConvexPolygonShape3D_pyl78")
 
-[node name="Wall_Stone013" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013"]
+[node name="Wall_Stone013" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013" unique_id=1605259895]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013" unique_id=116644261]
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone01" unique_id=834360481]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone01/StaticBody3D" unique_id=2110734097]
 shape = SubResource("ConvexPolygonShape3D_gbb5k")
 
-[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013"]
+[node name="Wall_Stone012" type="Node3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013" unique_id=323327623]
 transform = Transform3D(0.706205, 0, -0.708007, 0, 1, 0, 0.708007, 0, 0.706205, -5.59057, -0.346984, 13.8397)
 
-[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone012"]
+[node name="Wall_Stone01" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone012" unique_id=1965758992]
 mesh = SubResource("ArrayMesh_5248r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone012/Wall_Stone01"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone012/Wall_Stone01" unique_id=358212786]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone012/Wall_Stone01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Wall_Stone013/Wall_Stone013/Wall_Stone012/Wall_Stone01/StaticBody3D" unique_id=1342197317]
 shape = SubResource("ConvexPolygonShape3D_1pod7")
 
-[node name="Rock16" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Rock16" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=1426043443]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, -7.11915, 0, -5.22772)
 
-[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock16"]
+[node name="Rock022" type="Node3D" parent="NavigationRegion3D/Level_Models/Rock16" unique_id=972582761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44643, 0, 0.185266)
 
-[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock16/Rock022"]
+[node name="Rock02" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Rock16/Rock022" unique_id=706863316]
 mesh = SubResource("ArrayMesh_8ulvo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock16/Rock022/Rock02"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Rock16/Rock022/Rock02" unique_id=411545595]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock16/Rock022/Rock02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Rock16/Rock022/Rock02/StaticBody3D" unique_id=484921004]
 shape = SubResource("ConvexPolygonShape3D_8u4ow")
 
-[node name="Fence" type="Node3D" parent="NavigationRegion3D/Level_Models"]
+[node name="Fence" type="Node3D" parent="NavigationRegion3D/Level_Models" unique_id=677046206]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -5)
 
-[node name="FenceWood_H012" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H012" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=458414252]
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012" unique_id=829603124]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01" unique_id=1268340711]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1507975065]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=108619740]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01" unique_id=1638968915]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H012/FenceWood_H01" unique_id=1601097180]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H013" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H013" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=824294639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013" unique_id=2039749069]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01" unique_id=1100530286]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1228744643]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=47388154]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01" unique_id=1692672649]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H013/FenceWood_H01" unique_id=829752965]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H014" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H014" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=828395665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014" unique_id=2061359209]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01" unique_id=770003784]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1525423233]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1929770993]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01" unique_id=342372290]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H014/FenceWood_H01" unique_id=312935596]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H015" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H015" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=907652742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015" unique_id=347370611]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01" unique_id=1596692066]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=266128838]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=424939843]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01" unique_id=1610004706]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H015/FenceWood_H01" unique_id=2140793434]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H016" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H016" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=2030206913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016" unique_id=1471690594]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01" unique_id=612885934]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1873274213]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1388265970]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01" unique_id=386147680]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H016/FenceWood_H01" unique_id=274156004]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H017" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H017" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1427487882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017" unique_id=788693662]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01" unique_id=1693889871]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=2067708079]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=873253757]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01" unique_id=112849912]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H017/FenceWood_H01" unique_id=1859793150]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H018" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H018" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=386271634]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 3)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018" unique_id=161953934]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01" unique_id=1800467207]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1094657432]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=795639668]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01" unique_id=233139150]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H018/FenceWood_H01" unique_id=1247724624]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H019" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H019" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=576150426]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 5)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019" unique_id=1524223802]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01" unique_id=1652477446]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=955471873]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=846313398]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01" unique_id=1390108160]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H019/FenceWood_H01" unique_id=44789417]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H020" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H020" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1044677205]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 7)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020" unique_id=397524493]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01" unique_id=438121694]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1813222959]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=922002693]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01" unique_id=339678782]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H020/FenceWood_H01" unique_id=1211369489]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H021" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H021" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=860870168]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 9)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021" unique_id=1937769785]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01" unique_id=857279502]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1401198667]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1201228054]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01" unique_id=950932088]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H021/FenceWood_H01" unique_id=1540827630]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H022" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H022" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1869058594]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 11)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022" unique_id=2035694278]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01" unique_id=1498221860]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1306635619]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1271402772]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01" unique_id=414658430]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H022/FenceWood_H01" unique_id=2045714343]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H023" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H023" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=146757327]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 1)
 
-[node name="FenceWood_H024" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H024" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=112311561]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024" unique_id=130308447]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01" unique_id=1093736075]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=136864630]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1926605829]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01" unique_id=1036027428]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H024/FenceWood_H01" unique_id=311956452]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H025" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H025" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1765122053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 12)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025" unique_id=256583621]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01" unique_id=676191318]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=355012484]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=706634757]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01" unique_id=1802459740]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H025/FenceWood_H01" unique_id=1492544560]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H028" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H028" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=130268172]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028" unique_id=342500760]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01" unique_id=746286970]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=499610779]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=2106508845]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01" unique_id=207526767]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H028/FenceWood_H01" unique_id=653152933]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H029" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H029" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1767575729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 12)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029" unique_id=11432252]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01" unique_id=1695789509]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=2063693179]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1670304777]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01" unique_id=656045799]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H029/FenceWood_H01" unique_id=1592913009]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=687226583]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 1)
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01" unique_id=920518544]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1453865454]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=399137349]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01" unique_id=1917615290]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H01" unique_id=488182683]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H030" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H030" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=2006994332]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0, 3)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030" unique_id=1603059799]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01" unique_id=1140746717]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1058995471]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1152682597]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01" unique_id=1529257831]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H030/FenceWood_H01" unique_id=576797933]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H031" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H031" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1555186667]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0, 5)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031" unique_id=1860898414]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01" unique_id=1685177515]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1299579534]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1083667475]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01" unique_id=1704268452]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H031/FenceWood_H01" unique_id=1046667136]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H032" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H032" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1881612867]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0, 7)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032" unique_id=1206804123]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01" unique_id=818524402]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=2147012930]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=1780671826]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01" unique_id=1791547303]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H032/FenceWood_H01" unique_id=1828023704]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H033" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H033" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=1878531001]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0, 9)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033" unique_id=175112139]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01" unique_id=532625300]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=907867314]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=203673400]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01" unique_id=1176330364]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H033/FenceWood_H01" unique_id=1391300674]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H034" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H034" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=674131202]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0, 11)
 
-[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034"]
+[node name="FenceWood_H01" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034" unique_id=211268036]
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01" unique_id=1653257658]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01/SM_PROP_fence_v02_04" unique_id=1731576529]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01/SM_PROP_fence_v02_04/StaticBody3D" unique_id=706225879]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01" unique_id=463350901]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H034/FenceWood_H01" unique_id=1631575923]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="FenceWood_H02" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence"]
+[node name="FenceWood_H02" type="Node3D" parent="NavigationRegion3D/Level_Models/Fence" unique_id=379800259]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0, 1)
 
-[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02"]
+[node name="SM_PROP_fence_v02_04" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02" unique_id=938082353]
 mesh = SubResource("ArrayMesh_hvr6n")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02/SM_PROP_fence_v02_04"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02/SM_PROP_fence_v02_04" unique_id=853789495]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02/SM_PROP_fence_v02_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02/SM_PROP_fence_v02_04/StaticBody3D" unique_id=930034642]
 shape = SubResource("ConvexPolygonShape3D_rtxb7")
 
-[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02"]
+[node name="SM_PROP_fence_v02_04_1" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02" unique_id=1930324115]
 mesh = SubResource("ArrayMesh_sitwv")
 skeleton = NodePath("")
 
-[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02"]
+[node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02" unique_id=494953770]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
 
-[node name="Rat" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat" parent="." unique_id=1990924329 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0.67, -15)
 
-[node name="Rat2" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat2" parent="." unique_id=1856020919 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.67, 19)
 
-[node name="Rat3" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat3" parent="." unique_id=1915957745 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.67, 8)
 
-[node name="Rat4" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat4" parent="." unique_id=9099603 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.67, -10)
 
-[node name="Rat5" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat5" parent="." unique_id=113975613 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.67, 18)
 
-[node name="Rat6" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat6" parent="." unique_id=15606503 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.67, 5)
 
-[node name="Rat7" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat7" parent="." unique_id=1289229816 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.67, -6)
 
-[node name="Rat8" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat8" parent="." unique_id=782581612 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0.67, 17)
 
-[node name="Rat9" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat9" parent="." unique_id=1614107011 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.67, -19.0376)
 
-[node name="Rat10" parent="." instance=ExtResource("13_70p18")]
+[node name="Rat10" parent="." unique_id=1213347606 instance=ExtResource("13_70p18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.67, -2)
 
-[node name="DeathArea" type="Area3D" parent="."]
+[node name="DeathArea" type="Area3D" parent="." unique_id=1565680645]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00467491, -4.76837e-07, 0.0240517)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea" unique_id=1708248603]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -24)
 shape = SubResource("BoxShape3D_0gkvc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea" unique_id=2049946291]
 transform = Transform3D(0.883, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -24.268)
 mesh = SubResource("BoxMesh_r15mv")
 surface_material_override/0 = SubResource("StandardMaterial3D_6i0hw")
 
-[node name="DeathArea2" type="Area3D" parent="."]
+[node name="DeathArea2" type="Area3D" parent="." unique_id=1444176114]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00467491, -4.76837e-07, 0.0240517)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea2" unique_id=1200475584]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 24)
 shape = SubResource("BoxShape3D_0gkvc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea2" unique_id=2137913023]
 transform = Transform3D(0.883, 0, 0, 0, 0.984, 0, 0, 0, 0.984, 0, 0.1, 24)
 mesh = SubResource("BoxMesh_r15mv")
 skeleton = NodePath("../CollisionShape3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_dxlhd")
 
-[node name="DeathArea3" type="Area3D" parent="."]
+[node name="DeathArea3" type="Area3D" parent="." unique_id=161851277]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00467491, -4.76837e-07, 0.0240517)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3" unique_id=1631607064]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 1, 0)
 shape = SubResource("BoxShape3D_0gkvc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea3" unique_id=1797240708]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 0.1, 0)
 mesh = SubResource("BoxMesh_r15mv")
 surface_material_override/0 = SubResource("StandardMaterial3D_42b1v")
 
-[node name="DeathArea4" type="Area3D" parent="."]
+[node name="DeathArea4" type="Area3D" parent="." unique_id=1684353047]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00467491, -4.76837e-07, 0.0240517)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea4" unique_id=2080248811]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 1, 0)
 shape = SubResource("BoxShape3D_0gkvc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DeathArea4" unique_id=1962957627]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.0685, 0.429201, 0.192707)
 mesh = SubResource("BoxMesh_r15mv")
 surface_material_override/0 = SubResource("StandardMaterial3D_bo3sl")
 
-[node name="Player" parent="." instance=ExtResource("12_ukhp4")]
+[node name="Player" parent="." unique_id=2005245702 instance=ExtResource("12_ukhp4")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
 
-[node name="Trashcan2" type="Node3D" parent="." groups=["trashcans"]]
+[node name="Trashcan2" type="Node3D" parent="." unique_id=384847891 groups=["trashcans"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.7, -20)
 
-[node name="BezierCircle" type="Node3D" parent="Trashcan2"]
+[node name="BezierCircle" type="Node3D" parent="Trashcan2" unique_id=2110656039]
 
-[node name="Inside Can" type="MeshInstance3D" parent="Trashcan2"]
+[node name="Inside Can" type="MeshInstance3D" parent="Trashcan2" unique_id=1753814232]
 mesh = SubResource("ArrayMesh_ssrh4")
 skeleton = NodePath("")
 
-[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan2"]
+[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan2" unique_id=1146637814]
 mesh = SubResource("ArrayMesh_uktnl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan2/Trashcan Exterior"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan2/Trashcan Exterior" unique_id=1969939685]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan2/Trashcan Exterior/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan2/Trashcan Exterior/StaticBody3D" unique_id=2072575489]
 shape = SubResource("ConvexPolygonShape3D_qwudl")
 
-[node name="TrashArea" type="Area3D" parent="Trashcan2"]
+[node name="TrashArea" type="Area3D" parent="Trashcan2" unique_id=1779079412]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan2/TrashArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan2/TrashArea" unique_id=654948901]
 shape = SubResource("SphereShape3D_ukjay")
 
-[node name="Trashcan3" type="Node3D" parent="." groups=["trashcans"]]
+[node name="Trashcan3" type="Node3D" parent="." unique_id=158691535 groups=["trashcans"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.7, 14)
 
-[node name="BezierCircle" type="Node3D" parent="Trashcan3"]
+[node name="BezierCircle" type="Node3D" parent="Trashcan3" unique_id=662203195]
 
-[node name="Inside Can" type="MeshInstance3D" parent="Trashcan3"]
+[node name="Inside Can" type="MeshInstance3D" parent="Trashcan3" unique_id=733398222]
 mesh = SubResource("ArrayMesh_ssrh4")
 skeleton = NodePath("")
 
-[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan3"]
+[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan3" unique_id=619570737]
 mesh = SubResource("ArrayMesh_uktnl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan3/Trashcan Exterior"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan3/Trashcan Exterior" unique_id=950518380]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan3/Trashcan Exterior/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan3/Trashcan Exterior/StaticBody3D" unique_id=1115915416]
 shape = SubResource("ConvexPolygonShape3D_qwudl")
 
-[node name="TrashArea" type="Area3D" parent="Trashcan3"]
+[node name="TrashArea" type="Area3D" parent="Trashcan3" unique_id=1189698889]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan3/TrashArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan3/TrashArea" unique_id=1712969355]
 shape = SubResource("SphereShape3D_ukjay")
 
-[node name="Trashcan4" type="Node3D" parent="." groups=["trashcans"]]
+[node name="Trashcan4" type="Node3D" parent="." unique_id=1276311545 groups=["trashcans"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3223, 0.7, 11.6421)
 
-[node name="BezierCircle" type="Node3D" parent="Trashcan4"]
+[node name="BezierCircle" type="Node3D" parent="Trashcan4" unique_id=970228710]
 
-[node name="Inside Can" type="MeshInstance3D" parent="Trashcan4"]
+[node name="Inside Can" type="MeshInstance3D" parent="Trashcan4" unique_id=919035175]
 mesh = SubResource("ArrayMesh_ssrh4")
 skeleton = NodePath("")
 
-[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan4"]
+[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan4" unique_id=747012246]
 mesh = SubResource("ArrayMesh_uktnl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan4/Trashcan Exterior"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan4/Trashcan Exterior" unique_id=626445277]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan4/Trashcan Exterior/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan4/Trashcan Exterior/StaticBody3D" unique_id=1239016205]
 shape = SubResource("ConvexPolygonShape3D_qwudl")
 
-[node name="TrashArea" type="Area3D" parent="Trashcan4"]
+[node name="TrashArea" type="Area3D" parent="Trashcan4" unique_id=1135722856]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan4/TrashArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan4/TrashArea" unique_id=863926546]
 shape = SubResource("SphereShape3D_ukjay")
 
-[node name="Trashcan" type="Node3D" parent="." groups=["trashcans"]]
+[node name="Trashcan" type="Node3D" parent="." unique_id=1109942617 groups=["trashcans"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0.7, -3)
 
-[node name="BezierCircle" type="Node3D" parent="Trashcan"]
+[node name="BezierCircle" type="Node3D" parent="Trashcan" unique_id=1461227474]
 
-[node name="Inside Can" type="MeshInstance3D" parent="Trashcan"]
+[node name="Inside Can" type="MeshInstance3D" parent="Trashcan" unique_id=1438225324]
 mesh = SubResource("ArrayMesh_ssrh4")
 skeleton = NodePath("")
 
-[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan"]
+[node name="Trashcan Exterior" type="MeshInstance3D" parent="Trashcan" unique_id=44903324]
 mesh = SubResource("ArrayMesh_uktnl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan/Trashcan Exterior"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Trashcan/Trashcan Exterior" unique_id=2013456344]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan/Trashcan Exterior/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan/Trashcan Exterior/StaticBody3D" unique_id=477299699]
 shape = SubResource("ConvexPolygonShape3D_qwudl")
 
-[node name="TrashArea" type="Area3D" parent="Trashcan"]
+[node name="TrashArea" type="Area3D" parent="Trashcan" unique_id=440827881]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan/TrashArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trashcan/TrashArea" unique_id=247505423]
 shape = SubResource("SphereShape3D_ukjay")
 
-[node name="UserInterface" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme = SubResource("Theme_0pcwe")
-
-[node name="ScoreLabel" type="Label" parent="UserInterface"]
-layout_mode = 0
-offset_right = 69.0
-offset_bottom = 23.0
+[node name="ScoreLabel" type="Label3D" parent="." unique_id=1795713198]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -8)
+pixel_size = 0.01
+billboard = 1
 text = "Score: 0"
-label_settings = SubResource("LabelSettings_eheq8")
+font_size = 64
 uppercase = true
 script = ExtResource("55_kqtcu")
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgvqji31rm0y2"
 path.s3tc="res://.godot/imported/Streetlamp01_8.png-48e240eb5d5b9c1c719cc7bb36474056.s3tc.ctex"
+path.etc2="res://.godot/imported/Streetlamp01_8.png-48e240eb5d5b9c1c719cc7bb36474056.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Streetlamp01/Streetlamp01_8.png"
-dest_files=["res://.godot/imported/Streetlamp01_8.png-48e240eb5d5b9c1c719cc7bb36474056.s3tc.ctex"]
+dest_files=["res://.godot/imported/Streetlamp01_8.png-48e240eb5d5b9c1c719cc7bb36474056.s3tc.ctex", "res://.godot/imported/Streetlamp01_8.png-48e240eb5d5b9c1c719cc7bb36474056.etc2.ctex"]
 
 [params]
 

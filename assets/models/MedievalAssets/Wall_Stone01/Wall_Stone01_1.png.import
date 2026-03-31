@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqjy5pp65w1h0"
 path.s3tc="res://.godot/imported/Wall_Stone01_1.png-462dcf43c985ee2fc8b8bc0d2b989580.s3tc.ctex"
+path.etc2="res://.godot/imported/Wall_Stone01_1.png-462dcf43c985ee2fc8b8bc0d2b989580.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Wall_Stone01/Wall_Stone01_1.png"
-dest_files=["res://.godot/imported/Wall_Stone01_1.png-462dcf43c985ee2fc8b8bc0d2b989580.s3tc.ctex"]
+dest_files=["res://.godot/imported/Wall_Stone01_1.png-462dcf43c985ee2fc8b8bc0d2b989580.s3tc.ctex", "res://.godot/imported/Wall_Stone01_1.png-462dcf43c985ee2fc8b8bc0d2b989580.etc2.ctex"]
 
 [params]
 

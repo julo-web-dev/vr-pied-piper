@@ -1,4 +1,4 @@
-extends Label
+extends Label3D
 
 var score = 0
 

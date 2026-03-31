@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdllqvnr2318r"
 path.s3tc="res://.godot/imported/Wooden_Fence_2.png-cf7d7ed6cb805391e4390fce0e2dddbd.s3tc.ctex"
+path.etc2="res://.godot/imported/Wooden_Fence_2.png-cf7d7ed6cb805391e4390fce0e2dddbd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/MedievalAssets/Wooden_Fence/Wooden_Fence_2.png"
-dest_files=["res://.godot/imported/Wooden_Fence_2.png-cf7d7ed6cb805391e4390fce0e2dddbd.s3tc.ctex"]
+dest_files=["res://.godot/imported/Wooden_Fence_2.png-cf7d7ed6cb805391e4390fce0e2dddbd.s3tc.ctex", "res://.godot/imported/Wooden_Fence_2.png-cf7d7ed6cb805391e4390fce0e2dddbd.etc2.ctex"]
 
 [params]
 
