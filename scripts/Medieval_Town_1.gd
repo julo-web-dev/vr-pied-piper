@@ -4,8 +4,9 @@ const TIME_LIMIT = 60.0
 
 var îs_game_won : bool = false
 var time_remaining : float = TIME_LIMIT
+var last_second : int = int(TIME_LIMIT)
 
-@onready var timer_label : Label = $UserInterface/TimerLabel
+@onready var timer_label : Label = $HUD/TimerLabel
 
 func _process(delta):
 	if get_tree().get_nodes_in_group("rats").size() == 0:
@@ -15,10 +16,12 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
 
 	time_remaining -= delta
-	var seconds = max(0, ceil(time_remaining))
-	timer_label.text = "Time: %02d" % seconds
-	if time_remaining <= 10.0:
-		timer_label.add_theme_color_override("font_color", Color.RED)
+	var seconds = max(0, int(ceil(time_remaining)))
+	if seconds != last_second:
+		last_second = seconds
+		timer_label.text = "Time: %02d" % seconds
+		if seconds <= 10:
+			timer_label.add_theme_color_override("font_color", Color.RED)
 	if time_remaining <= 0.0:
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
