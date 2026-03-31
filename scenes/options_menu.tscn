@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhgbut2qmxram"]
+[gd_scene format=3 uid="uid://dhgbut2qmxram"]
 
 [ext_resource type="Script" uid="uid://cvj07f2q6p7cx" path="res://scripts/options_menu.gd" id="1_lg2qw"]
 [ext_resource type="AudioStream" uid="uid://byohjid0v3auf" path="res://assets/music/Main_Menu_Theme.mp3" id="2_h0su7"]
