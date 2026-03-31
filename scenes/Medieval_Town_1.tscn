@@ -1379,7 +1379,6 @@ points = PackedVector3Array(0.127347, 1.44376, -0.662288, 0.0821785, 1.44415, 0.
 radius = 1.0
 
 [node name="MedievalTown1" type="Node3D" unique_id=119837895]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202063, 0, -0.259794)
 script = ExtResource("1_84x6b")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2099270204]
@@ -3052,7 +3051,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bo3sl")
 
 [node name="Player" parent="." unique_id=2005245702 instance=ExtResource("12_ukhp4")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -3)
 
 [node name="Trashcan2" type="Node3D" parent="." unique_id=384847891 groups=["trashcans"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.7, -20)
@@ -3156,18 +3155,7 @@ font_size = 64
 uppercase = true
 script = ExtResource("55_kqtcu")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="TimerLabel" type="Label" parent="HUD"]
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -160.0
-offset_right = -10.0
-offset_bottom = 40.0
-text = "Time: 60"
-theme_override_font_sizes/font_size = 24
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=884233122]
 stream = ExtResource("56_t7y0o")
 autoplay = true
 

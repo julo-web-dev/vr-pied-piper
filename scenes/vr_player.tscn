@@ -19,6 +19,12 @@ script = ExtResource("1_script")
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
+[node name="TimerLabel" type="Label3D" parent="XRCamera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.15, -0.6)
+pixel_size = 0.001
+text = "Time: 60"
+font_size = 64
+
 [node name="LeftController" type="XRController3D" parent="."]
 tracker = &"left_hand"
 

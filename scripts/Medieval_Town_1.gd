@@ -6,7 +6,7 @@ var îs_game_won : bool = false
 var time_remaining : float = TIME_LIMIT
 var last_second : int = int(TIME_LIMIT)
 
-@onready var timer_label : Label = $HUD/TimerLabel
+@onready var timer_label : Label3D = $Player/XRCamera3D/TimerLabel
 
 func _process(delta):
 	if get_tree().get_nodes_in_group("rats").size() == 0:
@@ -21,7 +21,7 @@ func _process(delta):
 		last_second = seconds
 		timer_label.text = "Time: %02d" % seconds
 		if seconds <= 10:
-			timer_label.add_theme_color_override("font_color", Color.RED)
+			timer_label.modulate = Color.RED
 	if time_remaining <= 0.0:
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
