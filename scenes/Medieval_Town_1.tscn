@@ -3156,7 +3156,17 @@ font_size = 64
 uppercase = true
 script = ExtResource("55_kqtcu")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1838234521]
+[node name="TimerLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 0.0
+offset_right = 400.0
+offset_bottom = 23.0
+text = "Time: 60"
+label_settings = SubResource("LabelSettings_eheq8")
+uppercase = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("56_t7y0o")
 autoplay = true
 
