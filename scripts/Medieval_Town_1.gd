@@ -1,14 +1,26 @@
 extends Node3D
 
-var îs_game_won : bool = false
+const TIME_LIMIT = 60.0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var îs_game_won : bool = false
+var time_remaining : float = TIME_LIMIT
+
+@onready var timer_label : Label = $UserInterface/TimerLabel
+
 func _process(delta):
 	if get_tree().get_nodes_in_group("rats").size() == 0:
 		îs_game_won = true
-		
+
 	if îs_game_won:
 		get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
+
+	time_remaining -= delta
+	var seconds = max(0, ceil(time_remaining))
+	timer_label.text = "Time: %02d" % seconds
+	if time_remaining <= 10.0:
+		timer_label.add_theme_color_override("font_color", Color.RED)
+	if time_remaining <= 0.0:
+		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_death_area_body_entered(body):
 	if body.name.contains("Rat"):
