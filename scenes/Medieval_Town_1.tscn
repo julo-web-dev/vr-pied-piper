@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://c1aca72mr54l8" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_4.png" id="11_nyefq"]
 [ext_resource type="Texture2D" uid="uid://dv788bo6mstxf" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_5.png" id="12_tpr7i"]
 [ext_resource type="PackedScene" path="res://scenes/vr_player.tscn" id="12_ukhp4"]
-[ext_resource type="PackedScene" uid="uid://oa1vad5os5pc" path="res://scenes/Rat.tscn" id="13_70p18"]
 [ext_resource type="Texture2D" uid="uid://bk11c0t0q26k5" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_6.png" id="13_o3af0"]
 [ext_resource type="Texture2D" uid="uid://cekomk1fcaxyl" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_7.png" id="14_810pg"]
 [ext_resource type="Texture2D" uid="uid://coh16vq3yv6mg" path="res://assets/models/MedievalAssets/Stylized Hut01/Stylized Hut01_8.png" id="15_8yfkq"]
@@ -2965,36 +2964,6 @@ skeleton = NodePath("")
 [node name="SM_PROP_fence_v02_04_2" type="MeshInstance3D" parent="NavigationRegion3D/Level_Models/Fence/FenceWood_H02" unique_id=494953770]
 mesh = SubResource("ArrayMesh_7iwxa")
 skeleton = NodePath("")
-
-[node name="Rat" parent="." unique_id=1990924329 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0.67, -15)
-
-[node name="Rat2" parent="." unique_id=1856020919 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.67, 19)
-
-[node name="Rat3" parent="." unique_id=1915957745 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.67, 8)
-
-[node name="Rat4" parent="." unique_id=9099603 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.67, -10)
-
-[node name="Rat5" parent="." unique_id=113975613 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.67, 18)
-
-[node name="Rat6" parent="." unique_id=15606503 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.67, 5)
-
-[node name="Rat7" parent="." unique_id=1289229816 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.67, -6)
-
-[node name="Rat8" parent="." unique_id=782581612 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0.67, 17)
-
-[node name="Rat9" parent="." unique_id=1614107011 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.67, -19.0376)
-
-[node name="Rat10" parent="." unique_id=1213347606 instance=ExtResource("13_70p18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.67, -2)
 
 [node name="DeathArea" type="Area3D" parent="." unique_id=1565680645]
 unique_name_in_owner = true

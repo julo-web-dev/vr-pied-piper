@@ -1,60 +1,24 @@
 [gd_scene format=3 uid="uid://oa1vad5os5pc"]
 
 [ext_resource type="PackedScene" uid="uid://cxk3lnnywtkwa" path="res://assets/rat_animated/scene.gltf" id="1_xqh53"]
-
-[sub_resource type="GDScript" id="GDScript_gyof7"]
-script/source = "extends CharacterBody3D
-
-@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var root_node = $Sketchfab_Scene/Sketchfab_model/RAT_fbx/Object_2/RootNode
-@onready var player = get_parent().get_node(\"Player\")
-@onready var animation_player = $Sketchfab_Scene/AnimationPlayer
-
-@export var is_inside_music_area : bool = false
-@export var is_inside_trash_area : bool = false
-@export var is_alive : bool = true
-
-signal dead
-
-const SPEED = 2.0
-const GRAVITY = 9.8
-const ANGULAR_ACCELERATION = 10
-
-func _process(delta):
-	if not is_on_floor():
-		velocity.y -= GRAVITY * delta
-	if !velocity.is_zero_approx():
-		animation_player.play(\"Run\")
-	else:
-		#TODO: replace with idle animation?
-		animation_player.stop()
-
-	if is_inside_music_area:
-		nav_agent.target_position = player.global_transform.origin
-		var next_location = nav_agent.get_next_path_position()
-		var current_location = global_transform.origin
-		var new_velocity = (next_location - current_location).normalized() * SPEED
-		nav_agent.set_velocity(new_velocity)
-		root_node.rotation.y = lerp_angle(root_node.rotation.y, atan2(velocity.x,velocity.z), delta * ANGULAR_ACCELERATION)
-	else:
-		nav_agent.set_velocity(Vector3(0,0,0))	
-	
-	move_and_slide()
-	
-func _on_navigation_agent_3d_velocity_computed(safe_velocity):
-	velocity = velocity.move_toward(safe_velocity, .25)
-	move_and_slide()
-"
+[ext_resource type="Script" path="res://scripts/rat.gd" id="2_rat"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dvu42"]
 radius = 0.1
 height = 0.75
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dcjr7"]
+radius = 0.2
 
-[node name="Rat" type="CharacterBody3D" unique_id=875604714 groups=["rats"]]
+[node name="Rat" type="RigidBody3D" unique_id=875604714 groups=["rats"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.412096)
-script = SubResource("GDScript_gyof7")
+collision_layer = 3
+collision_mask = 1
+gravity_scale = 0.0
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("2_rat")
 
 [node name="Sketchfab_Scene" parent="." unique_id=1068948256 instance=ExtResource("1_xqh53")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -99,7 +63,5 @@ shape = SubResource("CapsuleShape3D_dvu42")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1995057981]
 shape = SubResource("SphereShape3D_dcjr7")
-
-[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
 
 [editable path="Sketchfab_Scene"]

@@ -1,53 +1,61 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene format=3 uid="uid://d0fpobnt01ufl"]
 
-[ext_resource type="Script" path="res://scripts/vr_player.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://8ug0c8raaw8r" path="res://scripts/vr_player.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="2_startxr"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="3_playerbody"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_movedirect"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="5_moveturn"]
-[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="6_lefthand"]
-[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="7_righthand"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="6_lefthand"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="7_righthand"]
+[ext_resource type="PackedScene" path="res://scenes/Flamethrower.tscn" id="8_flamethrower"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_music"]
-radius = 8.0
+radius = 12.0
 
-[node name="VRPlayer" type="XROrigin3D"]
+[node name="VRPlayer" type="XROrigin3D" unique_id=925235149]
 script = ExtResource("1_script")
 
-[node name="StartXR" parent="." instance=ExtResource("2_startxr")]
+[node name="StartXR" parent="." unique_id=1466186483 instance=ExtResource("2_startxr")]
 
-[node name="XRCamera3D" type="XRCamera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=434349555]
 
-[node name="TimerLabel" type="Label3D" parent="XRCamera3D"]
+[node name="TimerLabel" type="Label3D" parent="XRCamera3D" unique_id=1451099395]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.15, -0.6)
 pixel_size = 0.001
 text = "Time: 60"
 font_size = 64
 
-[node name="LeftController" type="XRController3D" parent="."]
+[node name="ScoreLabel" type="Label3D" parent="XRCamera3D" unique_id=1457090347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.15, -0.6)
+pixel_size = 0.001
+text = "Score: 0"
+font_size = 64
+
+[node name="LeftController" type="XRController3D" parent="." unique_id=654017598]
 tracker = &"left_hand"
 
-[node name="LeftHand" parent="LeftController" instance=ExtResource("6_lefthand")]
+[node name="LeftHand" parent="LeftController" unique_id=1009543277 instance=ExtResource("6_lefthand")]
 
-[node name="MovementDirect" parent="LeftController" instance=ExtResource("4_movedirect")]
-max_speed = 5.0
+[node name="MovementDirect" parent="LeftController" unique_id=641738046 instance=ExtResource("4_movedirect")]
+max_speed = 6.5
 strafe = true
 
-[node name="RightController" type="XRController3D" parent="."]
+[node name="RightController" type="XRController3D" parent="." unique_id=635904364]
 tracker = &"right_hand"
 
-[node name="RightHand" parent="RightController" instance=ExtResource("7_righthand")]
+[node name="RightHand" parent="RightController" unique_id=1667277657 instance=ExtResource("7_righthand")]
 
-[node name="MovementTurn" parent="RightController" instance=ExtResource("5_moveturn")]
+[node name="MovementTurn" parent="RightController" unique_id=1870014749 instance=ExtResource("5_moveturn")]
 smooth_turn_speed = 3.0
 
-[node name="PlayerBody" parent="." instance=ExtResource("3_playerbody")]
+[node name="Flamethrower" parent="RightController" unique_id=930760983 instance=ExtResource("8_flamethrower")]
 
-[node name="MusicArea" type="Area3D" parent="PlayerBody" groups=["player"]]
+[node name="PlayerBody" parent="." unique_id=594434145 instance=ExtResource("3_playerbody")]
+
+[node name="MusicArea" type="Area3D" parent="PlayerBody" unique_id=564679824 groups=["player"]]
 unique_name_in_owner = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody/MusicArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody/MusicArea" unique_id=1619539031]
 shape = SubResource("SphereShape3D_music")
 
 [connection signal="body_entered" from="PlayerBody/MusicArea" to="." method="_on_music_area_body_entered"]
